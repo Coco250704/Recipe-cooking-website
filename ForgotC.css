@@ -1,0 +1,182 @@
+/* ===== General Styles ===== */
+* {
+    margin: 0; /* Remove default margin for all elements */
+    padding: 0; /* Remove default padding for all elements */
+    box-sizing: border-box; /* Ensure padding and border are included in element's total width/height */
+}
+
+body {
+    font-family: 'Poppins', sans-serif; /* Set the font for the body */
+    background: linear-gradient(135deg, #779fd7, #fcfcfc); /* Set a gradient background for the body */
+    display: flex; /* Use flexbox layout */
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    height: 100vh; /* Full viewport height */
+    flex-direction: column; /* Stack elements vertically */
+}
+
+/* ===== Header Styles ===== */
+header {
+    display: flex; /* Use flexbox for the header layout */
+    justify-content: space-between; /* Space items evenly with space between them */
+    align-items: center; /* Vertically align items in the center */
+    padding: 15px 30px; /* Add padding around the header */
+    background: linear-gradient(90deg, #f0efee, #0310a1); /* Set gradient background for the header */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add shadow to the header */
+    width: 100%; /* Make the header take up the full width */
+}
+
+header img {
+    height: 100px; /* Set the logo height */
+    transition: transform 0.3s; /* Add a transition effect for transformation */
+}
+
+header img:hover {
+    transform: rotate(10deg); /* Rotate the logo slightly on hover */
+}
+
+nav a {
+    margin: 0 15px; /* Add horizontal margin between navigation links */
+    text-decoration: none; /* Remove underline from links */
+    color: white; /* Set the link text color to white */
+    font-size: 18px; /* Set the font size of links */
+    transition: color 0.3s; /* Add a smooth color transition */
+}
+
+nav a:hover {
+    color: #DAA520; /* Change link color on hover */
+    text-shadow: 0 0 10px rgba(218, 165, 32, 0.7); /* Add text shadow on hover */
+}
+
+/* ===== Container & Form Styles ===== */
+.container {
+    background: white; /* Set background color to white */
+    padding: 40px; /* Add padding inside the container */
+    border-radius: 12px; /* Round the corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* Add shadow to the container */
+    text-align: center; /* Center-align the text inside the container */
+    max-width: 400px; /* Limit the container width */
+    animation: fadeIn 1s ease-in-out; /* Apply fade-in animation */
+}
+
+/* Keyframe for fadeIn animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Start with opacity 0 */
+        transform: translateY(-20px); /* Start slightly above the final position */
+    }
+    to {
+        opacity: 1; /* End with full opacity */
+        transform: translateY(0); /* End at the original position */
+    }
+}
+
+h2 {
+    font-size: 26px; /* Set font size for the heading */
+    margin-bottom: 20px; /* Add space below the heading */
+    color: #DD7230; /* Set heading color */
+}
+
+p {
+    font-size: 16px; /* Set font size for paragraphs */
+    margin-bottom: 20px; /* Add space below paragraphs */
+    color: #444; /* Set paragraph color */
+}
+
+label {
+    font-size: 14px; /* Set font size for labels */
+    display: block; /* Make the label a block element */
+    margin-bottom: 8px; /* Add space below the label */
+    font-weight: bold; /* Make the label text bold */
+}
+
+input[type="email"] {
+    width: 100%; /* Make the input take full width */
+    padding: 12px; /* Add padding inside the input field */
+    margin-bottom: 20px; /* Add space below the input field */
+    border: 1px solid #ddd; /* Add a light border around the input field */
+    border-radius: 6px; /* Round the corners of the input field */
+    font-size: 16px; /* Set the font size for input text */
+    transition: all 0.3s; /* Add a smooth transition for all properties */
+}
+
+input[type="email"]:focus {
+    border-color: #ff512f; /* Change border color when input is focused */
+    box-shadow: 0 0 10px rgba(255, 81, 47, 0.3); /* Add a glow effect around the input field */
+}
+
+button[type="submit"] {
+    width: 100%; /* Make the button take full width */
+    padding: 12px; /* Add padding inside the button */
+    background: linear-gradient(90deg, #4CAF50, #2E8B57); /* Set gradient background for the button */
+    color: white; /* Set text color to white */
+    border: none; /* Remove border from the button */
+    border-radius: 6px; /* Round the corners of the button */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    font-size: 18px; /* Set font size for the button text */
+    transition: background 0.3s; /* Add a smooth background color transition */
+}
+
+button[type="submit"]:hover {
+    background: linear-gradient(90deg, #2E8B57, #4CAF50); /* Reverse the background gradient on hover */
+}
+
+/* ===== Footer Styles ===== */
+footer {
+    position: relative; /* Set footer position as relative */
+    width: 100%; /* Make the footer take full width */
+    background: linear-gradient(90deg, #3586ff, #1e3c72); /* Set gradient background for the footer */
+    min-height: 120px; /* Set minimum height for the footer */
+    padding: 30px 50px; /* Add padding inside the footer */
+    display: flex; /* Use flexbox layout */
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    flex-direction: column; /* Stack elements vertically */
+}
+
+footer p {
+    color: white; /* Set text color to white */
+    text-align: center; /* Center-align the text */
+    margin-top: 15px; /* Add space above the footer text */
+    font-size: 1.1em; /* Set font size for the footer text */
+}
+
+/* Wave Animation */
+footer .wave {
+    position: absolute; /* Set position as absolute */
+    top: -50px; /* Position it slightly above the footer */
+    left: 0; /* Align it to the left */
+    width: 100%; /* Make the wave span the full width */
+    height: 100px; /* Set height for the wave */
+    background: url("Images/wave.png"); /* Set the background image to the wave */
+    background-size: 500px 100px; /* Scale the wave background */
+}
+
+footer .wave:nth-child(odd) {
+    animation: animateWave 4s linear infinite; /* Apply animation to odd wave elements */
+}
+
+footer .wave:nth-child(even) {
+    animation: animateWave_02 4s linear infinite; /* Apply animation to even wave elements */
+    opacity: 0.5; /* Make even waves semi-transparent */
+}
+
+/* Keyframe for first wave animation */
+@keyframes animateWave {
+    from {
+        background-position-x: 1000px; /* Start the wave animation from the right */
+    }
+    to {
+        background-position-x: 0px; /* End the wave animation at the left */
+    }
+}
+
+/* Keyframe for second wave animation */
+@keyframes animateWave_02 {
+    from {
+        background-position-x: 0px; /* Start the wave animation from the left */
+    }
+    to {
+        background-position-x: 1000px; /* End the wave animation at the right */
+    }
+}

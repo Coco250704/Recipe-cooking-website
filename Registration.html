@@ -1,0 +1,114 @@
+<!DOCTYPE html> <!-- Defines the document type as HTML5 -->
+<html lang="en"> <!-- Specifies the language of the page as English -->
+
+<head>
+    <meta charset="UTF-8"> <!-- Sets the character encoding to UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures proper scaling on mobile devices -->
+    <title>Register - Coco's Flavour Fusion</title> <!-- The title of the webpage displayed on the browser tab -->
+    <link rel="stylesheet" href="RegistrationC.css"> <!-- Links the external stylesheet for registration page -->
+    <link rel="stylesheet" href="SignUpC.css"> <!-- Links an additional stylesheet for styling the sign-up section -->
+    <script src="RegistrationJ.js" defer></script> <!-- Links the external JavaScript file for handling registration logic -->
+    <!-- Imports SheetJS (xlsx.js), a library for handling Excel files -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Main registration form container -->
+    <div class="container">
+        <h2>Register</h2> <!-- Heading for the registration section -->
+        <form id="registration-form"> <!-- The registration form starts here -->
+        
+            <!-- First Name Input -->
+            <div class="input-wrapper">
+                <input type="text" id="fname" class="input-field" required> <!-- Text input for first name, marked as required -->
+                <label for="fname" class="label">First Name</label> <!-- Label for first name input -->
+            </div>
+
+            <!-- Last Name Input -->
+            <div class="input-wrapper">
+                <input type="text" id="lname" class="input-field" required> <!-- Text input for last name, marked as required -->
+                <label for="lname" class="label">Last Name</label> <!-- Label for last name input -->
+            </div>
+
+            <!-- Email Input -->
+            <div class="input-wrapper">
+                <input type="email" id="email" class="input-field" required> <!-- Email input, marked as required -->
+                <label for="email" class="label">Email</label> <!-- Label for email input -->
+            </div>
+
+            <!-- Preferences Dropdown -->
+            <div class="input-wrapper">
+                <select id="preferences" class="input-field" required> <!-- Dropdown for selecting preferences, marked as required -->
+                    <option value="" disabled selected>Preferences</option> <!-- Placeholder option -->
+                    <option value="vegan">Vegan</option> <!-- Option for vegan preference -->
+                    <option value="vegetarian">Vegetarian</option> <!-- Option for vegetarian preference -->
+                    <option value="non-vegetarian">Non-Vegetarian</option> <!-- Option for non-vegetarian preference -->
+                </select>
+            </div>
+
+            <!-- Country Dropdown -->
+            <div class="input-wrapper">
+                <select id="country" class="input-field" required> <!-- Dropdown for selecting country, marked as required -->
+                    <option value="" disabled selected>Select Country</option> <!-- Placeholder option -->
+                    <option value="USA">USA</option> <!-- Option for USA -->
+                    <option value="Canada">Canada</option> <!-- Option for Canada -->
+                    <option value="UK">UK</option> <!-- Option for UK -->
+                    <option value="Australia">Australia</option> <!-- Option for Australia -->
+                    <option value="India">India</option> <!-- Option for India -->
+                </select>
+            </div>
+
+            <!-- Sex Dropdown -->
+            <div class="input-wrapper">
+                <select id="sex" class="input-field" required> <!-- Dropdown for selecting sex, marked as required -->
+                    <option value="" disabled selected>Select Sex</option> <!-- Placeholder option -->
+                    <option value="Male">Male</option> <!-- Option for Male -->
+                    <option value="Female">Female</option> <!-- Option for Female -->
+                    <option value="Other">Other</option> <!-- Option for Other -->
+                </select>
+            </div>
+
+            <!-- Password Input -->
+            <div class="input-wrapper">
+                <input type="password" id="password" class="input-field" required> <!-- Password input, marked as required -->
+                <label for="password" class="label">Password</label> <!-- Label for password input -->
+            </div>
+
+            <!-- Confirm Password Input -->
+            <div class="input-wrapper">
+                <input type="password" id="confirm-password" class="input-field" required> <!-- Confirm password input, marked as required -->
+                <label for="confirm-password" class="label">Confirm Password</label> <!-- Label for confirm password input -->
+            </div>
+
+            <!-- Register Button -->
+            <button type="submit" onclick="exportToExcel()">Register</button> <!-- Submit button that triggers the exportToExcel function -->
+            <button type="button" onclick="resetForm()">Reset</button> <!-- Reset button to clear the form inputs -->
+        </form>
+    </div>
+
+    <!-- Login form section with slider -->
+    <div class="container">
+        <div class="slider">
+            <div class="form-section">
+                <form id="login-form"> <!-- Login form starts here -->
+                    <h2>Login</h2> <!-- Heading for the login section -->
+                    <input type="text" placeholder="Username" required> <!-- Username input, marked as required -->
+                    <input type="password" placeholder="Password" required> <!-- Password input, marked as required -->
+                    <div class="remember-forgot">
+                        <label><input type="checkbox"> Remember Me</label> <!-- Checkbox to remember login info -->
+                        <a href="Forgot.html">Forgot Password?</a> <!-- Link to forgot password page -->
+                    </div>
+                    
+                    <!-- Submit Button for Login -->
+                    <button type="button" class="btn" onclick="exporttoexcel()">Submit</button> <!-- Submit button for the login form -->
+
+                    <!-- Reset Button for Login Form -->
+                    <button type="reset" class="btn" id="reset-btn">Reset</button> <!-- Reset button for the login form -->
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

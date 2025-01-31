@@ -1,0 +1,42 @@
+<!DOCTYPE html> <!-- Declares the document type as HTML5 -->
+<html lang="en"> <!-- The root element of the page, specifying English language -->
+<head>
+    <meta charset="UTF-8"> <!-- Sets the character encoding to UTF-8 for proper text rendering -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures responsive design on mobile devices -->
+    <title>Coco's Flavour Fusion</title> <!-- The title of the page that appears in the browser tab -->
+    <link rel="stylesheet" href="AddRecipeC.css"> <!-- Links the external CSS file for styling -->
+    <script src="AddRecipeJ.js" defer></script> <!-- Links the external JavaScript file, deferring execution until HTML is fully parsed -->
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <img src="Images/logo.png" alt="Coco's Flavour Fusion Logo"> <!-- Logo image -->
+        <nav> <!-- Navigation bar for site links -->
+            <a href="index.html">Home</a> <!-- Link to the homepage -->
+            <a href="Recipes.html">Recipes</a> <!-- Link to the recipes page -->
+            <a href="AboutUs.html">About Us</a> <!-- Link to the about us page -->
+            <a href="Blog.html">Blog</a> <!-- Link to the blog page -->
+            <a href="Quiz.html">Quiz</a> <!-- Link to the quiz page -->
+            <a href="Registration.html">Register</a> <!-- Link to the registration page -->
+            <a href="AddRecipe.html">Add Your Recipe</a> <!-- Link to add recipe page -->
+            <a href="Newsletter.html">Newsletter</a> <!-- Link to the newsletter page -->
+        </nav>
+    </header>
+    
+    <!-- Add Your Content Page Section -->
+    <section class="add-page">
+        <div class="add-page-content">
+            <h2>Share Your Content</h2> <!-- Heading for the section -->
+            <p>Submit your page or idea to be featured on our website. Share your creativity with the world!</p> <!-- Descriptive text -->
+            <form class="add-page-form"> <!-- Form for submitting content -->
+                <input type="text" name="title" placeholder="Page Title" required /> <!-- Input field for the title, required for form submission -->
+                <textarea 
+                    name="description" placeholder="Page Description or Content" rows="5" required ></textarea> <!-- Textarea for page description/content, required for form submission -->
+                <input type="url" name="url" placeholder="Link to Your Page (Optional)"/> <!-- Optional input field for a link to the page -->
+                <button type="submit" class="submit-button">Submit</button> <!-- Submit button to send the form -->
+            </form>
+        </div>
+    </section>
+
+</body>
+</html>

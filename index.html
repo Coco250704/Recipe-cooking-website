@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags for character encoding and responsive design -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Title of the webpage -->
+    <title>Coco's Flavour Fusion</title>
+
+    <!-- Link to the external CSS stylesheet for styling -->
+    <link rel="stylesheet" href="HomeC.css">
+    
+    <!-- Link to the external JavaScript file, defer ensures it loads after the page -->
+    <script src="HomePageJ.js" defer></script>
+</head>
+<body>
+    <!-- Header Section with logo and navigation links -->
+    <header>
+        <img src="Images/logo.png" alt="Coco's Flavour Fusion"> <!-- Logo image -->
+        <nav>
+            <!-- Navigation links to different pages of the website -->
+            <a href="index.html">Home</a>
+            <a href="Recipes.html">Recipes</a>
+            <a href="AboutUs.html">About Us</a>
+            <a href="Blog.html">Blog</a>
+            <a href="Quiz.html">Quiz</a>
+            <a href="Registration.html">Register</a>
+            <a href="AddRecipe.html">Add Your Recipe</a>
+            <a href="Newsletter.html">Newsletter</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section with background image and overlay -->
+    <div class="hero">
+        <!-- Dark overlay to improve text visibility on the background image -->
+        <div class="overlay"></div>
+
+        <!-- Content inside the hero section -->
+        <div class="content">
+            <h1>Welcome to Coco's Flavour Fusion</h1> <!-- Main heading -->
+            <p>Dive into a world where every recipe is an adventure waiting to be explored.</p> <!-- Subheading -->
+            <a class="cta-button" href="Recipes.html">Explore Recipes</a> <!-- Call to action button linking to Recipes page -->
+        </div>
+    </div>
+
+    <!-- Carousel Section for showcasing slides -->
+    <div class="carousel">
+        <!-- Previous button to navigate the carousel -->
+        <button class="carousel-button prev">&lt;</button>
+
+        <!-- Carousel track container -->
+        <div class="carousel-track-container">
+            <ul class="carousel-track">
+                <!-- Slide 1 -->
+                <li class="carousel-slide">
+                    <div class="slide-content">
+                        <div class="slide-image">
+                            <img src="Images/image1.jpg" alt="Discover New Flavors"> <!-- Image for this slide -->
+                        </div>
+                        <div class="slide-text">
+                            <div class="recipe-card" id="hoverCard">
+                                <h2>Discover New Flavors</h2> <!-- Heading for the slide -->
+                                <p>Unlock a treasure trove of unique recipes that blend traditional techniques with innovative twists. Each dish tells a story and invites you to be part of its journey.</p> <!-- Description text -->
+                                <a class="cta-button" href="Recipes.html">Explore Recipes</a> <!-- Call to action button linking to Recipes page -->
+                            </div>
+                            <!-- Audio element to play sound when hovering -->
+                            <audio id="hoverSound" src="Audio/hover-sound.mp3" preload="auto"></audio>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Slide 2 -->
+                <li class="carousel-slide">
+                    <div class="slide-content">
+                        <div class="slide-image">
+                            <img src="Images/image2.jpg" alt="Join Our Culinary Community"> <!-- Image for this slide -->
+                        </div>
+                        <div class="slide-text">
+                            <h2>Join Our Culinary Community</h2> <!-- Heading for the slide -->
+                            <p>Connect with fellow food enthusiasts and share your creations.</p> <!-- Description text -->
+                            <a class="cta-button" href="Registration.html">Register</a> <!-- Call to action button linking to Registration page -->
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Slide 3 -->
+                <li class="carousel-slide">
+                    <div class="slide-content">
+                        <div class="slide-image">
+                            <img src="Images/image3.jpg" alt="Unleash Creativity"> <!-- Image for this slide -->
+                        </div>
+                        <div class="slide-text">
+                            <h2>Unleash Creativity</h2> <!-- Heading for the slide -->
+                            <p>Experience the art of creating delicious meals effortlessly.</p> <!-- Description text -->
+                            <a class="cta-button" href="AddRecipe.html">Add your recipe</a> <!-- Call to action button linking to Add Recipe page -->
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Next button to navigate the carousel -->
+        <button class="carousel-button next">&gt;</button>
+    </div>
+
+    <!-- Navigation indicators for the carousel -->
+    <div class="carousel-nav">
+        <button class="carousel-indicator current-slide"></button> <!-- Active slide indicator -->
+        <button class="carousel-indicator"></button> <!-- Inactive slide indicator -->
+        <button class="carousel-indicator"></button> <!-- Inactive slide indicator -->
+    </div>
+
+    <!-- External JavaScript for carousel functionality -->
+    <script src="HomeJ.js"></script>
+
+    <!-- Recipe Highlights Section -->
+    <section class="highlights">
+        <h2>Tantalizing Recipe Highlights</h2> <!-- Section heading -->
+        <div class="recipes">
+            <!-- Recipe 1 -->
+            <div class="recipe-card">
+                <img src="Images/recipe4.png" alt="Recipe 1"> <!-- Image for the recipe -->
+                <h3>Sunny Garlic Butter Shrimp</h3> <!-- Recipe title -->
+                <p>A quick and easy recipe perfect for any occasion.</p> <!-- Recipe description -->
+            </div>
+            <!-- Recipe 2 -->
+            <div class="recipe-card">
+                <img src="Images/recipe5.png" alt="Recipe 2"> <!-- Image for the recipe -->
+                <h3>Decadent Chocolate Lava Cake</h3> <!-- Recipe title -->
+                <p>A delightful dessert to treat yourself and loved ones.</p> <!-- Recipe description -->
+            </div>
+            <!-- Recipe 3 -->
+            <div class="recipe-card">
+                <img src="Images/recipe6.png" alt="Recipe 3"> <!-- Image for the recipe -->
+                <h3>Fresh Mediterranean Quinoa Salad</h3> <!-- Recipe title -->
+                <p>A healthy dish packed with vibrant flavors.</p> <!-- Recipe description -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Cooking Tips Section -->
+    <section class="cooking-section">
+        <h1>Mastering the Art of Cooking</h1> <!-- Section heading -->
+        <p>Unlock your culinary potential with tips that will transform your kitchen experience and elevate your dishes.</p> <!-- Section description -->
+
+        <!-- Card container for individual cooking tips -->
+        <div class="card-container">
+            <!-- Card 1 -->
+            <div class="card">
+                <img src="Images/Quick Weeknight Dinners.jpg" alt="Quick Weeknight Dinners"> <!-- Image for the card -->
+                <div class="card-content">
+                    <h3>Quick Weeknight Dinners</h3> <!-- Card title -->
+                    <p>January 19, 2025</p> <!-- Date for the tip -->
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="card">
+                <img src="Images/Sautéing.jpg" alt="Art of Sautéing"> <!-- Image for the card -->
+                <div class="card-content">
+                    <h3>Mastering the Art of Sautéing</h3> <!-- Card title -->
+                    <p>July 25, 2024</p> <!-- Date for the tip -->
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="card">
+                <img src="Images/baking.jpg" alt="Baking Tips"> <!-- Image for the card -->
+                <div class="card-content">
+                    <h3>10 Tips for Perfect Baking</h3> <!-- Card title -->
+                    <p>May 15, 2024</p> <!-- Date for the tip -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer section with copyright and social icons -->
+        <footer>
+            <p>&copy; 2025 Coco's Flavour Fusion. All Rights Reserved.</p> <!-- Copyright notice -->
+            <div class="social-icons">
+                <!-- Social media action buttons -->
+                <button>Like</button>
+                <button>Post</button>
+                <button>Save</button>
+                <button>Share</button>
+            </div>
+        </footer>
+    </section>
+</body>
+</html>

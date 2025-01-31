@@ -1,0 +1,97 @@
+/* Quiz Page Styles */
+body {
+    font-family: 'Verdana', sans-serif; /* Sets the font family to Verdana with sans-serif as fallback */
+    background-color: #f1f8e9; /* Sets a light green background color for the page */
+    margin: 0; /* Removes default margin around the body */
+}
+
+/* Header */
+header {
+    display: flex; /* Uses flexbox to layout header content */
+    justify-content: space-between; /* Distributes items in header with space between */
+    align-items: center; /* Vertically centers items in header */
+    padding: 10px 20px; /* Adds padding around the header */
+    background-color: #fff; /* Sets background color of the header to white */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds subtle shadow effect to the header */
+}
+
+header img {
+    height: 100px; /* Sets the height of the logo image */
+}
+
+nav a {
+    margin: 0 10px; /* Adds horizontal spacing between navigation links */
+    text-decoration: none; /* Removes underline from links */
+    color: #ffffff; /* Sets text color to white */
+    font-size: 16px; /* Sets font size for navigation links */
+}
+
+nav a:hover {
+    color: #DAA520; /* Changes text color to golden when hovering over links */
+}
+
+/* Additional Header Styling */
+header {
+    background-color: #33691e; /* Sets background color of header to a dark green */
+    color: white; /* Sets text color in header to white */
+    text-align: center; /* Centers the text inside the header */
+    padding: 15px; /* Adds padding to header */
+    font-size: 1.8em; /* Increases the font size of the header */
+}
+
+/* Quiz Container Styles */
+.quiz-container {
+    max-width: 600px; /* Restricts the width of the quiz container to 600px */
+    margin: 20px auto; /* Centers the container with margin around it */
+    padding: 20px; /* Adds padding inside the container */
+    background-color: white; /* Sets background color to white */
+    border-radius: 10px; /* Rounds the corners of the container */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adds subtle shadow around the container */
+}
+
+/* Quiz Question Styles */
+.quiz-question {
+    font-size: 1.2em; /* Sets the font size for quiz questions */
+    margin-bottom: 15px; /* Adds space below each question */
+}
+
+/* Quiz Options Styling */
+.quiz-options {
+    display: flex; /* Uses flexbox to layout quiz options */
+    flex-direction: column; /* Stacks options vertically */
+    gap: 10px; /* Adds vertical space between options */
+}
+
+.quiz-options button {
+    padding: 10px; /* Adds padding inside each quiz option button */
+    background-color: #33691e; /* Sets background color of buttons to dark green */
+    color: white; /* Sets text color to white */
+    border: none; /* Removes border from buttons */
+    border-radius: 5px; /* Rounds the corners of the buttons */
+    cursor: pointer; /* Changes cursor to pointer when hovering over buttons */
+    transition: background-color 0.3s ease; /* Adds smooth transition effect when background color changes */
+}
+
+.quiz-options button:hover {
+    background-color: #558b2f; /* Changes background color to lighter green on hover */
+}
+
+/* Share Button Container */
+#share-container {
+    margin-top: 20px; /* Adds space above the share container */
+    text-align: center; /* Centers the share buttons inside the container */
+}
+
+.share-button {
+    margin: 10px; /* Adds space around each share button */
+    padding: 10px 20px; /* Adds padding inside each share button */
+    color: white; /* Sets text color to white */
+    text-decoration: none; /* Removes underline from the share link */
+    background-color: #33691e; /* Sets background color of share buttons to dark green */
+    border-radius: 5px; /* Rounds the corners of the share buttons */
+    transition: background-color 0.3s ease; /* Adds smooth transition effect when background color changes */
+}
+
+.share-button:hover {
+    background-color: #558b2f; /* Changes background color to lighter green on hover */
+}

@@ -1,0 +1,194 @@
+/* Importing Poppins font family from Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+/* Defining CSS custom variables (root variables) for color scheme and border-radius */
+:root {
+    --primary-color: #f8b400; /* Primary color used for buttons and highlights */
+    --secondary-color: #ffffff; /* Secondary color, white, used for text or backgrounds */
+    --text-color: #333; /* Default text color, dark gray */
+    --border-radius: 10px; /* Border radius for rounded corners */
+}
+
+/* Resetting padding, margin, and box-sizing for all elements */
+* {
+    padding: 0; /* Removes default padding */
+    margin: 0; /* Removes default margin */
+    box-sizing: border-box; /* Ensures box-sizing includes padding and border */
+    font-family: 'Poppins', sans-serif; /* Setting the font family to Poppins */
+}
+
+/* Styling for the body element */
+body {
+    background: url("Images/bg.jpg") no-repeat center center/cover; /* Background image with cover and centered */
+    display: flex; /* Flexbox for centering content */
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    min-height: 100vh; /* Ensures body takes up full viewport height */
+}
+
+/* Main container style for the form */
+.container {
+    background: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
+    padding: 30px; /* Padding inside the container */
+    width: 400px; /* Fixed width for the form */
+    border-radius: var(--border-radius); /* Rounded corners using custom variable */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Soft shadow around the container */
+}
+
+/* Styling for the heading (h2) inside the container */
+h2 {
+    text-align: center; /* Centers the heading */
+    margin-bottom: 20px; /* Adds margin below the heading */
+    color: var(--primary-color); /* Applies primary color to the heading */
+}
+
+/* Wrapper for input fields to position them properly */
+.input-wrapper {
+    position: relative; /* Needed for absolute positioning of the label */
+    margin-bottom: 20px; /* Space below each input wrapper */
+}
+
+/* Styling for input fields */
+.input-field {
+    width: 100%; /* Makes the input field take up full width */
+    padding: 12px; /* Padding inside the input field */
+    border: 2px solid #ccc; /* Light gray border */
+    border-radius: var(--border-radius); /* Rounded corners */
+    outline: none; /* Removes default outline */
+    font-size: 16px; /* Text size inside the input field */
+    transition: 0.3s; /* Smooth transition effect */
+}
+
+/* Focus state for input fields */
+.input-field:focus {
+    border-color: var(--primary-color); /* Change border color to primary color on focus */
+}
+
+/* Label styling */
+.label {
+    position: absolute; /* Positioned above the input field */
+    top: 14px; /* Space from the top */
+    left: 15px; /* Space from the left */
+    font-size: 16px; /* Default font size */
+    color: #666; /* Gray color for the label */
+    transition: 0.3s; /* Smooth transition for movement */
+    pointer-events: none; /* Prevents label from being clickable */
+}
+
+/* Adjust label position when input is focused or filled */
+.input-field:focus ~ .label,
+.input-field:valid ~ .label {
+    top: -10px; /* Moves label above the input field */
+    left: 12px; /* Adjusts label position */
+    font-size: 12px; /* Smaller font size */
+    background: white; /* White background for the label */
+    padding: 0 5px; /* Padding around the label text */
+    color: var(--primary-color); /* Changes label color to primary */
+}
+
+/* Styling for buttons */
+button {
+    width: 100%; /* Makes the button take up full width */
+    padding: 12px; /* Padding inside the button */
+    background: var(--primary-color); /* Background color for the button */
+    border: none; /* Removes border */
+    border-radius: var(--border-radius); /* Rounded corners */
+    font-size: 16px; /* Font size for button text */
+    color: var(--secondary-color); /* White text color */
+    cursor: pointer; /* Shows pointer cursor on hover */
+    transition: 0.3s; /* Smooth transition on hover */
+}
+
+/* Button hover effect */
+button:hover {
+    background: #d49000; /* Darker shade of the primary color */
+}
+
+/* Container style for the slider */
+.container {
+    position: relative; /* Makes container position relative for children */
+    width: 400px; /* Fixed width for the container */
+    overflow: hidden; /* Hides overflow content */
+}
+
+/* Styling for the slider section */
+.slider {
+    display: flex; /* Flexbox for horizontal alignment */
+    width: 200%; /* Slider takes up twice the container width */
+    transition: transform 0.5s ease-in-out; /* Smooth sliding transition */
+}
+
+/* Each form section inside the slider */
+.form-section {
+    width: 50%; /* Each form section takes up 50% of the slider width */
+    min-width: 50%; /* Prevents shrinking below 50% width */
+}
+
+/* Heading (h2) inside the slider section */
+h2 {
+    margin-bottom: 20px; /* Adds margin below heading */
+    color: #333; /* Dark text color for better visibility */
+}
+
+/* General styling for input fields and select dropdowns */
+input, select {
+    width: 100%; /* Full width for input fields */
+    padding: 10px; /* Padding inside inputs */
+    margin: 10px 0; /* Margin above and below inputs */
+    border: 1px solid #ccc; /* Light border color */
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* General button styling for input buttons */
+button {
+    width: 100%; /* Full width for buttons */
+    padding: 10px; /* Padding inside buttons */
+    margin: 10px 0; /* Margin above and below buttons */
+    border: none; /* Removes button border */
+    border-radius: 5px; /* Rounded corners for buttons */
+    background: #333; /* Dark background for the button */
+    color: #fff; /* White text for the button */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Button hover effect for the general buttons */
+button:hover {
+    background: #555; /* Lighter shade on hover */
+}
+
+/* Styling for the remember-me and forgot-password section */
+.remember-forgot {
+    display: flex; /* Flexbox layout */
+    justify-content: space-between; /* Distribute space between items */
+    align-items: center; /* Align items vertically */
+    font-size: 14px; /* Smaller font size */
+}
+
+/* Styling for the links in the remember-forgot section */
+.remember-forgot a {
+    color: #333; /* Dark color for links */
+    text-decoration: none; /* Removes underline */
+}
+
+/* Hover effect for the remember-forgot links */
+.remember-forgot a:hover {
+    text-decoration: underline; /* Underlines the link on hover */
+}
+
+/* Styling for the slider controls section */
+.slider-controls {
+    display: flex; /* Flexbox layout for slider controls */
+    justify-content: space-between; /* Space between buttons */
+    margin-top: 10px; /* Margin above the controls */
+}
+
+/* Styling for the slider control buttons */
+.slider-controls button {
+    width: 48%; /* Buttons take up 48% of the space */
+    background: #007BFF; /* Blue background for buttons */
+}
+
+/* Hover effect for the slider control buttons */
+.slider-controls button:hover {
+    background: #0056b3; /* Darker shade of blue on hover */
+}

@@ -1,0 +1,152 @@
+/* Global Styles */
+* {
+    box-sizing: border-box; /* Ensures padding and border are included in element's total width and height */
+    margin: 0; /* Resets default margin of elements */
+    padding: 0; /* Resets default padding of elements */
+}
+
+body {
+    font-family: 'Georgia', serif; /* Sets a serif font-family for the body text */
+    background-color: #f2f2f2; /* Light gray background color for the body */
+    margin: 0; /* Removes margin around the body */
+}
+
+/* Header */
+header {
+    display: flex; /* Uses flexbox to layout the header content */
+    justify-content: space-between; /* Distributes header content with space between them */
+    align-items: center; /* Vertically centers items in the header */
+    padding: 10px 20px; /* Adds padding to the top/bottom and left/right of the header */
+    background-color: #F4C95D; /* Light gold background color */
+    color: white; /* White text color for the header */
+    font-size: 1.5em; /* Increases the font size of the header */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow beneath the header */
+}
+
+header img {
+    height: 100px; /* Sets a fixed height for the logo image */
+}
+
+nav a {
+    margin: 0 10px; /* Adds horizontal margin to each navigation link */
+    text-decoration: none; /* Removes underline from navigation links */
+    color: #333; /* Dark gray text color for the links */
+    font-size: 16px; /* Sets the font size for navigation links */
+}
+
+nav a:hover {
+    color: #DAA520; /* Changes the link color to a gold shade when hovered */
+}
+
+/* Recipes Container - Grid Layout */
+.recipes-container {
+    display: grid; /* Uses grid layout to arrange recipe cards */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Creates a flexible grid with at least 300px per column */
+    gap: 20px; /* Adds space between grid items */
+    padding: 20px; /* Adds padding around the recipes container */
+    justify-content: center; /* Centers the grid content */
+}
+
+/* Recipe Card Styling */
+.recipe-card {
+    background: #fff; /* White background for the recipe card */
+    border-radius: 12px; /* Rounds the corners of the recipe card */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Adds a soft shadow around the card */
+    overflow: hidden; /* Ensures that no child element exceeds the boundary of the card */
+    text-align: center; /* Centers text inside the recipe card */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for hover effects */
+    padding: 20px; /* Adds padding inside the recipe card */
+    max-width: 400px; /* Sets a maximum width for the recipe card */
+}
+
+.recipe-card img {
+    width: 100%; /* Makes the image take up the full width of the card */
+    height: 200px; /* Sets a fixed height for the images */
+    object-fit: cover; /* Ensures images cover the area without distortion */
+    border-radius: 12px; /* Rounds the corners of the image */
+    transform: rotate(-2deg); /* Slightly tilts the image for a scrapbook-style feel */
+}
+
+.recipe-card:nth-child(even) img {
+    transform: rotate(2deg); /* Slightly tilts even-numbered images in the opposite direction */
+}
+
+/* Headings */
+.recipe-card h3 {
+    font-size: 20px; /* Sets a larger font size for the title of each recipe */
+    color: #333; /* Dark gray text color for recipe titles */
+    margin-top: 10px; /* Adds space above the recipe title */
+}
+
+.recipe-card p {
+    font-size: 14px; /* Sets a smaller font size for the description text */
+    color: #666; /* Lighter gray color for the description text */
+    padding: 0 10px 10px; /* Adds horizontal padding and bottom padding */
+}
+
+/* Ingredients & Instructions Styling */
+.recipe-card h2 {
+    font-size: 18px; /* Sets a slightly larger font size for the headings (Ingredients, Instructions) */
+    color: #ff6f61; /* Sets a soft red color for the headings */
+    margin-top: 15px; /* Adds space above the headings */
+}
+
+.recipe-card ul, .recipe-card ol {
+    text-align: left; /* Aligns the list items to the left */
+    padding: 10px; /* Adds padding inside the lists */
+    font-size: 14px; /* Sets the font size for the list items */
+    max-width: 90%; /* Limits the width of the lists to 90% of the card's width */
+    margin: auto; /* Centers the list inside the recipe card */
+}
+
+/* Center Text */
+.recipe-card p, .recipe-card ul, .recipe-card ol {
+    text-align: left; /* Ensures text and lists are left-aligned */
+}
+
+/* Fix Large Recipe Issue */
+.large-recipe-card {
+    grid-column: span 2; /* Makes the large recipe card span across two columns */
+    max-width: 600px; /* Sets a maximum width for the large recipe card */
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .recipes-container {
+        grid-template-columns: 1fr; /* Changes to a single column layout on smaller screens */
+    }
+    .large-recipe-card {
+        grid-column: span 1; /* Makes the large recipe card take up one column on smaller screens */
+    }
+}
+
+/* Footer */
+footer {
+    margin-top: 40px; /* Adds space above the footer */
+    font-size: 0.9em; /* Sets a smaller font size for the footer text */
+    color: #777; /* Light gray text color for the footer */
+    text-align: center; /* Centers the footer text */
+}
+
+footer a {
+    color: #33691e; /* Dark green color for footer links */
+    text-decoration: none; /* Removes underline from footer links */
+}
+
+footer .social-icons {
+    margin-top: 10px; /* Adds space above the social media icons */
+}
+
+footer .social-icons button {
+    margin: 0 5px; /* Adds horizontal margin between social media buttons */
+    padding: 5px 10px; /* Adds padding inside the buttons */
+    background-color: #33691e; /* Dark green background color for the buttons */
+    color: white; /* White text color for the buttons */
+    border: none; /* Removes border around the buttons */
+    border-radius: 5px; /* Rounds the corners of the buttons */
+    cursor: pointer; /* Changes the cursor to a pointer on hover */
+}
+
+footer .social-icons button:hover {
+    background-color: #558b2f; /* Changes the background color on hover to a lighter green */
+}

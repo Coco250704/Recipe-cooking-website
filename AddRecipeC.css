@@ -1,0 +1,85 @@
+/* ===== Header Styles ===== */
+header {
+    display: flex; /* Enables flexbox layout for header */
+    justify-content: space-between; /* Spaces out the logo and nav links evenly */
+    align-items: center; /* Vertically aligns the items in the center */
+    padding: 10px 20px; /* Adds padding inside the header for spacing */
+    background-color: #0329be; /* Sets a blue background color for the header */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow under the header */
+}
+
+header img {
+    height: 100px; /* Sets the height of the logo to 100px */
+}
+
+nav a {
+    margin: 0 10px; /* Adds horizontal space between navigation links */
+    text-decoration: none; /* Removes underline from the links */
+    color: #333; /* Sets the color of the links to dark gray */
+    font-size: 16px; /* Sets the font size of the links to 16px */
+}
+
+nav a:hover {
+    color: #f9f9f9; /* Changes the link color to a light gray when hovered */
+}
+
+/* ===== Add Page Section Styles ===== */
+.add-page {
+    background-color: #f9f9f9; /* Sets a light gray background color */
+    padding: 60px 20px; /* Adds padding inside the section */
+    text-align: center; /* Centers the text inside the section */
+    border-radius: 10px; /* Rounds the corners of the section */
+    margin: 40px auto; /* Centers the section on the page with top/bottom margin */
+    max-width: 900px; /* Sets a maximum width for the section */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow around the section */
+}
+
+.add-page-content h2 {
+    font-size: 2.2rem; /* Sets the font size for the heading */
+    margin-bottom: 15px; /* Adds space below the heading */
+    color: #333; /* Sets the text color to dark gray */
+}
+
+.add-page-content p {
+    font-size: 1.1rem; /* Sets the font size for the paragraph */
+    margin-bottom: 25px; /* Adds space below the paragraph */
+    color: #555; /* Sets the text color to a lighter gray */
+}
+
+/* ===== Add Page Form Styles ===== */
+.add-page-form {
+    display: flex; /* Enables flexbox layout for the form */
+    flex-direction: column; /* Stacks the form elements vertically */
+    align-items: center; /* Centers the form elements horizontally */
+    gap: 15px; /* Adds space between form elements */
+}
+
+.add-page-form input[type="text"],
+.add-page-form input[type="url"],
+.add-page-form textarea {
+    width: 80%; /* Sets the width of the input fields and textarea to 80% */
+    max-width: 600px; /* Limits the width to 600px */
+    padding: 10px; /* Adds padding inside the input fields */
+    font-size: 1rem; /* Sets the font size of the text inside the fields */
+    border: 1px solid #ddd; /* Adds a light gray border */
+    border-radius: 5px; /* Rounds the corners of the input fields */
+}
+
+.add-page-form textarea {
+    resize: vertical; /* Allows the textarea to be resized vertically */
+}
+
+/* ===== Submit Button Styles ===== */
+.submit-button {
+    padding: 12px 25px; /* Adds padding inside the button */
+    font-size: 1rem; /* Sets the font size of the button text */
+    color: white; /* Sets the text color to white */
+    background-color: #4CAF50; /* Sets a green background color for the button */
+    border: none; /* Removes the border from the button */
+    border-radius: 5px; /* Rounds the corners of the button */
+    cursor: pointer; /* Changes the cursor to a pointer when hovering over the button */
+}
+
+.submit-button:hover {
+    background-color: #45a049; /* Darkens the background color of the button on hover */
+}

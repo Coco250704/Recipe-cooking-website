@@ -1,0 +1,43 @@
+<!DOCTYPE html> <!-- Declares the document type as HTML5 -->
+<html lang="en"> <!-- Specifies the language of the document as English -->
+<head>
+    <meta charset="UTF-8"> <!-- Specifies the character encoding for the document (UTF-8) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures responsive design for mobile devices -->
+    <title>Quiz - Coco's Flavour Fusion</title> <!-- Sets the title of the webpage displayed on the browser tab -->
+    <link rel="stylesheet" href="QuizC.css"> <!-- Links the external CSS file for styling the quiz page -->
+    <script src="QuizJ.js" defer></script> <!-- Links the external JavaScript file for quiz functionality, deferring execution until the page is loaded -->
+</head>
+
+<!-- Header Section -->
+<header>
+    <img src="Images/logo.png"> <!-- Displays the logo image of the website -->
+    <nav> <!-- Navigation bar -->
+        <a href="index.html">Home</a> <!-- Link to the home page -->
+        <a href="Recipes.html">Recipes</a> <!-- Link to the recipes page -->
+        <a href="AboutUs.html">About Us</a> <!-- Link to the about us page -->
+        <a href="Blog.html">Blog</a> <!-- Link to the blog page -->
+        <a href="Quiz.html">Quiz</a> <!-- Link to the quiz page -->
+        <a href="Registration.html">Register</a> <!-- Link to the registration page -->
+        <a href="AddRecipe.html">Add Your Recipe</a> <!-- Link to the page where users can submit their recipes -->
+        <a href="Newsletter.html">Newsletter</a> <!-- Link to the newsletter subscription page -->
+    </nav>
+</header>
+
+<body>
+    <section class="quiz-hero"> <!-- Hero section for the quiz page -->
+        <h1>Culinary Quiz</h1> <!-- Main heading for the quiz -->
+        <p>Test your cooking knowledge with our fun quiz!</p> <!-- Description text for the quiz -->
+    </section>
+
+    <main> <!-- Main content area -->
+        <div id="quiz-container" class="quiz-container"></div> <!-- Container for displaying quiz questions dynamically -->
+        <button id="submit-button" class="quiz-submit">Submit Quiz</button> <!-- Button to submit the quiz -->
+        <div id="result" class="result"></div> <!-- Container to display the result after quiz submission -->
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="main-footer"> <!-- Footer of the page -->
+        <p>&copy; 2025 Coco's Flavour Fusion. All Rights Reserved.</p> <!-- Copyright notice for the website -->
+    </footer>
+</body>
+</html>

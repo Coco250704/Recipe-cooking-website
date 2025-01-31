@@ -1,0 +1,397 @@
+body {
+    margin: 0; /* Removes default margin around the body */
+    font-family: Arial, sans-serif; /* Sets the default font family for the page */
+}
+
+/* Header Styles */
+header {
+    display: flex; /* Uses flexbox to align header elements */
+    justify-content: space-between; /* Distributes space between the items */
+    align-items: center; /* Vertically aligns items in the center */
+    padding: 10px 20px; /* Adds padding to the header */
+    background-color: #DD7230; /* Sets background color of the header */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow to the header */
+}
+
+header img {
+    height: 100px; /* Sets the height of the logo image */
+}
+
+nav a {
+    margin: 0 10px; /* Adds spacing between navigation links */
+    text-decoration: none; /* Removes the underline from links */
+    color: #333; /* Sets the color of the links */
+    font-size: 16px; /* Sets the font size for the links */
+}
+
+nav a:hover {
+    color: #DAA520; /* Changes the link color on hover */
+}
+
+input {
+    position: absolute; /* Absolutely positions the input element */
+    top: 50%; /* Centers the input vertically */
+    left: 50%; /* Centers the input horizontally */
+    transform: translate(-50%, -50%); /* Adjusts the positioning for exact center */
+    color: #fff; /* Sets the input text color to white */
+    font-size: 16px; /* Sets the font size inside the input */
+    background: transparent; /* Makes the input background transparent */
+    width: 250px; /* Sets the width of the input */
+    height: 250px; /* Sets the height of the input */
+    padding: 10px; /* Adds padding inside the input box */
+    border-radius: 35px; /* Rounds the corners of the input box */
+    transition: all 0.5s; /* Smooth transition for all properties */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), /* Adds a light shadow */
+    0 6px 20px 0 #9a86fb; /* Adds another layer of shadow for depth */
+}
+
+input::placeholder {
+    color: #efefef; /* Sets the placeholder text color */
+    opacity: 0; /* Makes placeholder text invisible initially */
+    transition: opacity 150ms ease-out; /* Adds a transition for placeholder opacity */
+}
+
+input:focus::placeholder {
+    opacity: 1; /* Makes placeholder visible when input is focused */
+}
+
+input:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), /* Adds a light shadow on hover */
+    0 6px 20px 0 #cacadf; /* Adds another layer of shadow for hover effect */
+}
+
+input:focus,
+input:not(:placeholder-shown) {
+    width: 250px; /* Keeps the width consistent during focus */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), /* Adds focus shadow */
+    0 6px 20px 0 #ffbb70; /* Changes the shadow color on focus */
+}
+
+/* Container for the background image */
+.hero {
+    position: relative; /* Ensures child elements position relative to this */
+    width: 100%; /* Takes up full width */
+    height: 50vh; /* Height set to 50% of the viewport height */
+    background: url("Images/image5.jpg") no-repeat center center/cover; /* Adds the background image */
+    display: flex; /* Enables flexbox */
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    text-align: center; /* Centers text inside the container */
+    color: white; /* Sets text color to white */
+}
+
+/* Semi-transparent overlay to enhance text visibility */
+.overlay {
+    position: absolute; /* Covers the entire section */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+}
+
+/* The content section where text is placed */
+.content {
+    position: relative; /* Ensures it sits above the overlay */
+    z-index: 2; /* Makes sure the content is above the overlay */
+    max-width: 600px; /* Limits text width for readability */
+}
+
+.cta-button {
+    background-color: #fff; /* Sets background color for the button */
+    color: #ff914d; /* Sets text color for the button */
+    padding: 10px 20px; /* Adds padding inside the button */
+    text-decoration: none; /* Removes underline from the button */
+    font-weight: bold; /* Makes text bold */
+    border-radius: 5px; /* Rounds the corners of the button */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+}
+
+.cta-button:hover {
+    background-color: #ff914d; /* Changes button background color on hover */
+    color: #fff; /* Changes text color to white on hover */
+}
+
+/* Carousel Container */
+.carousel {
+    position: relative; /* Allows absolute positioning of buttons inside */
+    max-width: 80%; /* Limits the carousel width */
+    overflow: hidden; /* Hides any overflow from the carousel */
+    background: white; /* Sets background color for the carousel */
+    border-radius: 10px; /* Rounds the corners of the carousel */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Adds subtle shadow to the carousel */
+}
+
+/* Carousel Track */
+.carousel-track {
+    display: flex; /* Displays the slides in a row */
+    transition: transform 0.5s ease-in-out; /* Smooth transition between slides */
+}
+
+/* Individual Slide */
+.carousel-slide {
+    flex: 0 0 100%; /* Each slide takes up 100% of the width */
+    display: flex; /* Uses flexbox to align content */
+    justify-content: space-between; /* Spaces the content in the slide */
+    align-items: center; /* Vertically aligns content */
+    text-align: left; /* Aligns text to the left */
+    padding: 20px; /* Adds padding to each slide */
+}
+
+/* Slide Content */
+.slide-content {
+    display: flex; /* Uses flexbox to align image and text */
+    align-items: center; /* Vertically aligns items */
+    gap: 20px; /* Adds space between image and text */
+}
+
+/* Image Section */
+.slide-image img {
+    max-width: 400px; /* Limits the image width */
+    height: auto; /* Keeps the image aspect ratio */
+    border-radius: 8px; /* Rounds the image corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds subtle shadow to the image */
+}
+
+/* Text Section */
+.slide-text {
+    max-width: 500px; /* Limits the text width for readability */
+}
+
+.slide-text h2 {
+    font-size: 2rem; /* Sets font size for headers */
+    color: #333; /* Sets header text color */
+    margin-bottom: 15px; /* Adds margin below the header */
+}
+
+.slide-text p {
+    font-size: 1rem; /* Sets font size for paragraphs */
+    color: #555; /* Sets text color for paragraphs */
+    margin-bottom: 20px; /* Adds margin below paragraphs */
+}
+
+/* Call to Action Buttons */
+.cta-button {
+    display: inline-block; /* Displays button inline */
+    padding: 10px 20px; /* Adds padding inside the button */
+    margin-top: 10px; /* Adds margin above the button */
+    background: #f8b400; /* Sets button background color */
+    color: black; /* Sets text color for the button */
+    text-decoration: none; /* Removes underline */
+    font-size: 16px; /* Sets font size for the button */
+    border-radius: 5px; /* Rounds the button corners */
+    transition: 0.3s; /* Adds transition for hover effect */
+}
+
+.cta-button:hover {
+    background: white; /* Changes background on hover */
+    color: black; /* Changes text color on hover */
+}
+
+/* Carousel Buttons */
+.carousel-button {
+    position: absolute; /* Positions buttons absolutely inside the carousel */
+    top: 50%; /* Positions them vertically centered */
+    transform: translateY(-50%); /* Centers them vertically */
+    background: transparent(0, 0, 0, 0.6); /* Transparent background with slight opacity */
+    color: black; /* Sets button text color */
+    border: none; /* Removes border */
+    padding: 10px 20px; /* Adds padding inside the buttons */
+    cursor: pointer; /* Changes cursor to pointer */
+    z-index: 2; /* Makes sure buttons are above other content */
+    font-size: 20px; /* Sets font size */
+    border-radius: 50%; /* Makes buttons circular */
+}
+
+.carousel-button.prev {
+    left: 10px; /* Positions the previous button to the left */
+}
+
+.carousel-button.next {
+    right: 10px; /* Positions the next button to the right */
+}
+
+/* Navigation Indicators */
+.carousel-nav {
+    display: flex; /* Displays the indicators horizontally */
+    justify-content: center; /* Centers the indicators */
+    margin-top: 15px; /* Adds margin above indicators */
+}
+
+.carousel-indicator {
+    width: 10px; /* Sets width of each indicator */
+    height: 10px; /* Sets height of each indicator */
+    background: gray; /* Sets background color of indicators */
+    border-radius: 50%; /* Makes indicators circular */
+    margin: 0 5px; /* Adds spacing between indicators */
+    cursor: pointer; /* Changes cursor to pointer */
+}
+
+.carousel-indicator.current-slide {
+    background: black; /* Changes color of the active indicator */
+}
+
+/* Button Hover Styles */
+#hoverButton {
+    padding: 10px 20px; /* Adds padding inside the button */
+    font-size: 16px; /* Sets the font size */
+    cursor: pointer; /* Changes the cursor to pointer */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+#hoverButton:hover {
+    background-color: #007BFF; /* Changes background color on hover */
+    color: white; /* Changes text color on hover */
+}
+
+/* Highlights Section */
+.highlights {
+    background-color: #5C2E0F; /* Sets background color */
+    padding: 40px 20px; /* Adds padding to the section */
+    text-align: center; /* Centers the text */
+}
+
+.highlights h2 {
+    font-size: 2rem; /* Sets font size for the title */
+    margin-bottom: 20px; /* Adds margin below the title */
+}
+
+.highlights .recipes {
+    display: flex; /* Uses flexbox to align recipes */
+    flex-direction: column; /* Stacks the recipe cards vertically */
+    align-items: center; /* Centers items horizontally */
+}
+
+.highlights .recipe-card {
+    display: flex; /* Uses flexbox to align image and text */
+    align-items: center; /* Vertically aligns image and text */
+    background-color: transparent; /* Makes background transparent */
+    color: white; /* Sets text color to white */
+    width: 600px; /* Sets the width of the recipe card */
+    margin: 20px 0; /* Adds margin between recipe cards */
+    text-align: left; /* Aligns text to the left */
+}
+
+.highlights .recipe-card img {
+    width: 150px; /* Sets the image width */
+    height: auto; /* Keeps the aspect ratio of the image */
+    object-fit: cover; /* Ensures the image covers the space */
+    border-radius: 5px; /* Rounds the corners of the image */
+    margin-right: 15px; /* Adds space between image and text */
+}
+
+.highlights .recipe-card h3 {
+    font-size: 1.3rem; /* Sets font size for the recipe name */
+    margin-bottom: 5px; /* Adds space below the recipe name */
+}
+
+.highlights .recipe-card p {
+    font-size: 1rem; /* Sets font size for the recipe description */
+}
+
+/* Section Styles */
+.cooking-section {
+    padding: 20px; /* Adds padding to the section */
+}
+
+.cooking-section h1 {
+    font-size: 2em; /* Sets font size for section title */
+    margin-bottom: 10px; /* Adds margin below the title */
+}
+
+.cooking-section p {
+    font-size: 1.2em; /* Sets font size for the paragraph */
+    color: #666; /* Sets text color */
+    margin-bottom: 30px; /* Adds margin below the paragraph */
+}
+
+/* Card Container */
+.card-container {
+    display: flex; /* Uses flexbox to align cards */
+    justify-content: center; /* Centers the cards horizontally */
+    gap: 20px; /* Adds space between the cards */
+    flex-wrap: wrap; /* Allows cards to wrap on smaller screens */
+}
+
+/* Individual Card Styles */
+.card {
+    background: #f9f9f9; /* Sets card background color */
+    border: 1px solid #ddd; /* Adds border around the card */
+    border-radius: 10px; /* Rounds the corners of the card */
+    overflow: hidden; /* Ensures content doesn’t overflow the card */
+    width: 300px; /* Sets the width of the card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds shadow to the card */
+    transition: transform 0.3s ease; /* Adds smooth hover effect */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Moves the card slightly up on hover */
+}
+
+/* Card Image */
+.card img {
+    width: 100%; /* Makes the image fill the card width */
+    height: 200px; /* Sets image height */
+    object-fit: cover; /* Ensures image covers the space */
+}
+
+/* Card Content */
+.card-content {
+    padding: 15px; /* Adds padding inside the card */
+}
+
+.card-content h3 {
+    font-size: 1.2em; /* Sets font size for card title */
+    color: #333; /* Sets text color */
+    margin-bottom: 10px; /* Adds space below the title */
+}
+
+.card-content p {
+    font-size: 0.9em; /* Sets font size for the card description */
+    color: #888; /* Sets text color */
+}
+
+/* Footer */
+footer {
+    margin-top: 40px; /* Adds margin above the footer */
+    font-size: 0.9em; /* Sets font size for the footer text */
+    color: #777; /* Sets text color */
+}
+
+footer a {
+    color: #33691e; /* Sets color for footer links */
+    text-decoration: none; /* Removes underline from links */
+}
+
+footer .social-icons {
+    margin-top: 10px; /* Adds margin above the social icons */
+}
+
+footer .social-icons button {
+    margin: 0 5px; /* Adds margin around the social buttons */
+    padding: 5px 10px; /* Adds padding inside the buttons */
+    background-color: #33691e; /* Sets button background color */
+    color: white; /* Sets button text color */
+    border: none; /* Removes button border */
+    border-radius: 5px; /* Rounds the corners of the buttons */
+    cursor: pointer; /* Changes cursor to pointer */
+}
+
+footer .social-icons button:hover {
+    background-color: #558b2f; /* Changes background color on hover */
+}
+
+@media (max-width: 768px) {
+    .carousel {
+        max-width: 90%; /* Reduces carousel width on smaller screens */
+    }
+
+    .slide-content {
+        flex-direction: column; /* Stacks content vertically */
+        text-align: center; /* Centers the text */
+    }
+
+    .slide-image img {
+        max-width: 100%; /* Ensures the image fills the available space */
+    }
+}

@@ -1,0 +1,153 @@
+/* Header Styles */
+header {
+    position: fixed; /* Keeps the header fixed at the top */
+    top: 0; /* Positions it at the top */
+    left: 0; /* Aligns it to the left */
+    width: 100%; /* Makes the header span the full width of the page */
+    display: flex;
+    justify-content: space-between; /* Spaces out the logo and navigation */
+    align-items: center; /* Vertically aligns items in the header */
+    padding: 10px 20px; /* Adds space inside the header */
+    background-color: #DD7230; /* Background color of the header */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds a shadow for depth */
+    z-index: 1000; /* Ensures the header is above other elements */
+}
+
+header img {
+    height: 50px; /* Height of the logo in the header */
+}
+
+nav a {
+    margin: 0 10px; /* Spacing between navigation links */
+    text-decoration: none; /* Removes underline from links */
+    color: #333; /* Default color for links */
+    font-size: 16px; /* Font size of navigation links */
+}
+
+nav a:hover {
+    color: #DAA520; /* Changes color when a link is hovered */
+}
+
+ /* Add space between navigation and box */
+ body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f9f9f9;
+}
+
+/* Style for the outer big box */
+.big-box {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    background: #f5f5f5; /* Light grey background for the big box */
+    border: 2px solid #ddd; /* Subtle border for the big box */
+    border-radius: 15px; /* Rounded corners for the big box */
+    width: 500px; /* Fixed width of the big box */
+    padding: 30px; /* Padding inside the big box */
+    margin: 100px auto; /* Adds space above the big box */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Adds a slight shadow */
+}
+
+/* Style for the input box container */
+.inputbox {
+    position: relative;
+    width: 100%; /* Input boxes span full width of the big box */
+    margin-bottom: 20px; /* Space between input boxes */
+}
+
+/* Input field styling */
+.inputbox input {
+    position: relative;
+    width: 100%; /* Input stretches to fill the container */
+    padding: 20px 10px 10px;
+    background: transparent;
+    outline: none;
+    box-shadow: none;
+    border: none;
+    border-bottom: 2px solid #ddd; /* Bottom border for the input */
+    color: #23242a;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    z-index: 10;
+}
+
+/* Placeholder span styling */
+.inputbox span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 20px 10px 10px;
+    font-size: 1em;
+    color: #3b3b3b;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+/* Behavior when the input is focused or has a valid value */
+.inputbox input:valid ~ span,
+.inputbox input:focus ~ span {
+    color: #33691e;
+    transform: translateX(-10px) translateY(-34px);
+    font-size: 0.75em;
+}
+
+/* Animated underline styling */
+.inputbox i {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #33691e;
+    border-radius: 4px;
+    transition: 0.5s;
+    pointer-events: none;
+    z-index: 9;
+}
+
+/* Behavior when the input is focused or has a valid value */
+.inputbox input:valid ~ i,
+.inputbox input:focus ~ i {
+    height: 44px;
+}
+
+/* Optional: Styling for a submit button (if needed) */
+.submit-btn {
+    padding: 12px 20px;
+    background: #33691e;
+    color: #fff;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background: #285214;
+}
+
+/* Styling for the "Already have an account" link */
+.account-link {
+    margin-top: 15px;
+    font-size: 0.9em;
+    color: #3b3b3b;
+}
+
+.account-link a {
+    text-decoration: none;
+    color: #33691e;
+    font-weight: bold;
+}
+
+.account-link a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,109 @@
+body { 
+    font-family: Arial, sans-serif;
+    /* Sets the font family for the whole page to Arial, with a fallback to sans-serif */
+    background-color: #fff;
+    /* Sets the background color of the body to white */
+    margin: 0;
+    /* Removes default margin around the body */
+    padding: 0;
+    /* Removes default padding around the body */
+}
+
+.container {
+    width: 100%;
+    /* Makes the container element take up the full width of the page */
+    max-width: 1200px;
+    /* Restricts the container's maximum width to 1200px */
+    margin: 0 auto;
+    /* Centers the container horizontally */
+    padding: 20px;
+    /* Adds 20px of padding inside the container */
+}
+
+header {
+    text-align: center;
+    /* Centers the header content */
+    margin-bottom: 20px;
+    /* Adds a 20px margin below the header */
+}
+
+h1 {
+    color: #4CAF50;
+    /* Sets the color of the <h1> text to green */
+    font-size: 36px;
+    /* Sets the font size of the <h1> text to 36px */
+}
+
+main {
+    text-align: center;
+    /* Centers the content in the <main> element */
+    margin-top: 50px;
+    /* Adds a 50px margin above the main content */
+}
+
+p {
+    font-size: 18px;
+    /* Sets the font size for paragraphs to 18px */
+    color: #333;
+    /* Sets the text color of paragraphs to a dark gray */
+}
+
+.cta {
+    margin-top: 30px;
+    /* Adds a 30px margin above the call-to-action (CTA) section */
+}
+
+.button {
+    background-color: #4CAF50;
+    /* Sets the background color of the button to green */
+    color: white;
+    /* Sets the text color of the button to white */
+    padding: 10px 20px;
+    /* Adds padding inside the button (10px vertical, 20px horizontal) */
+    text-decoration: none;
+    /* Removes underlining from the button link */
+    border-radius: 5px;
+    /* Rounds the corners of the button */
+}
+
+.button:hover {
+    background-color: #45a049;
+    /* Changes the button's background color to a darker green when hovered */
+}
+
+.video-container {
+    margin: 30px 0;
+    /* Adds 30px margin above and below the video container */
+    position: relative;
+    /* Sets the container's position to relative for positioning child elements */
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    /* Adds padding to maintain a 16:9 aspect ratio (height:width ratio) */
+    height: 0;
+    /* Sets the height of the container to 0 to control it with padding-bottom */
+    overflow: hidden;
+    /* Hides any content that exceeds the container's bounds */
+}
+
+.video-container video {
+    position: absolute;
+    /* Positions the video element absolutely within the container */
+    top: 0;
+    /* Positions the video at the top of the container */
+    left: 0;
+    /* Positions the video at the left of the container */
+    width: 100%;
+    /* Sets the video's width to fill the container */
+    height: 100%;
+    /* Sets the video's height to fill the container */
+}
+
+footer {
+    text-align: center;
+    /* Centers the footer content */
+    margin-top: 50px;
+    /* Adds a 50px margin above the footer */
+    font-size: 14px;
+    /* Sets the font size of the footer text to 14px */
+    color: #777;
+    /* Sets the footer text color to a light gray */
+}
